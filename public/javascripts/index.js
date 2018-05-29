@@ -5,8 +5,8 @@ var thermoHandle;
 var handleX= 45.59;
 var handleY = 303.75;
 var thermoBoundary = {
-    l: 44,
-    r: 62,
+    l: 30,
+    r: 75,
     t: 30,
     b: 360
 }
@@ -68,8 +68,16 @@ function mouseDragged(){
     }
     if(mouseY>300 && mouseY<=400){
         imgEl.setAttribute("src", "/images/01-temperature-coldest.jpg");
-    }else if(mouseY > 270 && mouseY <=300 ){
+    }else if(mouseY > 250 && mouseY <=300 ){
         imgEl.setAttribute("src", "/images/02-temperature-cold.jpg");
+    }else if(mouseY > 220 && mouseY <=250){
+        imgEl.setAttribute("src","/images/03-temperature-warm.jpg");
+    }else if(mouseY > 170 && mouseY <=220){
+        imgEl.setAttribute("src","/images/04-temperature-hot.jpg");
+    }else if(mouseY > 40 && mouseY <=170){
+        imgEl.setAttribute("src","/images/05-temperature-hottest.jpg");
+    }else if(mouseY <=40){
+        imgEl.setAttribute("src","/images/06-temperature-boiling.jpg");
     }
 }
 
