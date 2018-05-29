@@ -56,9 +56,9 @@ function draw(){
     }
 
     degreeC = Math.round((-3/8)*(handleY+2) + (1833/16))
-    degreeCEl.setAttribute("value",`${degreeC} Celcius`);
+    degreeCEl.setAttribute("value",`${degreeC}`);
     degreeF = Math.round(degreeC * 1.8 + 32);
-    degreeFEl.setAttribute("value", `${degreeF} Fahrenheit`);
+    degreeFEl.setAttribute("value", `${degreeF}`);
 }
 
 function mouseDragged(){
