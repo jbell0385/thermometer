@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+#img-container{
+  
+}
+
+.label-custom{
+  font-size:1.5em;
+}
+
+.form-200{
+  max-width:75px;
+  font-size:1.5em;
+  text-align: right;
+}

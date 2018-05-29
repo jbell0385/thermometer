@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Thermometer Tech Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <body class="container-fluid">
+      <h1>Thermometer Tech Demo</h1>
+      <div class="row">
+        <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+          <div id="thermo-container"></div>
+        </div>
+        <div class="col-8">
+          <div class="form-inline">
+            <div class="form-group">
+              <input id="degreeC" class="form-control form-200" type="text" value="0">
+              <label class="label-custom" for="degreeC">Celcius</label>
+            </div>
+            <div class="form-group">
+              <input id="degreeF" class="form-control form-200" type="text" value="32">
+              <label class="label-custom" for="degreeF">Fahrenheit</label>
+            </div>
+          </div>
+            <!-- <h1 id="degreeC">0</h1>
+            <h1 id="degreeF">32</h1> -->
+            <div id="img-container">
+              <img src="" alt="" class="img-thumbnail" id="img-weather">
+            </div>  
+        </div>
+      </div> 
+    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="/javascripts/p5/p5.min.js"></script>
+    <script src="/javascripts/p5/addons/p5.dom.min.js"></script>
+    <script src="/javascripts/p5/addons/p5.sound.min.js"></script>
+    <script src="/javascripts/index.js"></script>
   </body>
 </html>
