@@ -59,6 +59,7 @@ function draw(){
     degreeCEl.setAttribute("value",`${degreeC}`);
     degreeF = Math.round(degreeC * 1.8 + 32);
     degreeFEl.setAttribute("value", `${degreeF}`);
+    
 }
 
 function mouseDragged(){
