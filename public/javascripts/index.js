@@ -18,6 +18,14 @@ var degreeFEl;
 
 var imgEl;
 
+var temperatureFormEl = document.getElementById("temperature-form");
+temperatureFormEl.addEventListener("submit", changeTemp);
+
+function changeTemp(e){
+    alert(e);
+}
+
+
 function preload(){
     thermobg = loadImage('/images/thermo-bg.png');
     ticks = loadImage('/images/ticks.png');
@@ -56,10 +64,10 @@ function draw(){
     }
 
     degreeC = Math.round((-3/8)*(handleY+2) + (1833/16))
-    degreeCEl.setAttribute("value",`${degreeC}`);
+    degreeCEl.innerHTML = `<h2>${degreeC} &deg;C</h2>`;
     degreeF = Math.round(degreeC * 1.8 + 32);
-    degreeFEl.setAttribute("value", `${degreeF}`);
-    
+    degreeFEl.innerHTML = `<h2>${degreeF}  &deg;F</h2>`;
+
 }
 
 function mouseDragged(){
@@ -67,17 +75,17 @@ function mouseDragged(){
         handleY = mouseY;
         console.log(handleY);
     }
-    if(mouseY>300 && mouseY<=400){
+    if(mouseY>300 && mouseY<=400 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src", "/images/01-temperature-coldest.jpg");
-    }else if(mouseY > 250 && mouseY <=300 ){
+    }else if(mouseY > 250 && mouseY <=300 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src", "/images/02-temperature-cold.jpg");
-    }else if(mouseY > 220 && mouseY <=250){
+    }else if(mouseY > 220 && mouseY <=250 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src","/images/03-temperature-warm.jpg");
-    }else if(mouseY > 170 && mouseY <=220){
+    }else if(mouseY > 170 && mouseY <=220 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src","/images/04-temperature-hot.jpg");
-    }else if(mouseY > 40 && mouseY <=170){
+    }else if(mouseY > 40 && mouseY <=170 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src","/images/05-temperature-hottest.jpg");
-    }else if(mouseY <=40){
+    }else if(mouseY <=40 && mouseX<thermoBoundary.r && mouseX>thermoBoundary.l){
         imgEl.setAttribute("src","/images/06-temperature-boiling.jpg");
     }
 }

@@ -1,11 +1,14 @@
 body {
-
+  height:430px;
 }
 
-a {
-  color: #00B7FF;
+.container-fluid{
+  height:430px;
 }
 
+.row{
+  height:430px;
+}
 #img-container{
   
 }
